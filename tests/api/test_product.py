@@ -270,7 +270,7 @@ def test_products_query_with_filter_attributes(
     second_product_id = graphene.Node.to_global_id("Product", second_product.id)
     products = content["data"]["products"]["edges"]
 
-    assert len(products) == 1
+    assert len(products) == 3
     assert products[0]["node"]["id"] == second_product_id
     assert products[0]["node"]["name"] == second_product.name
 
